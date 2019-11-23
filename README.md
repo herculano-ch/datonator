@@ -23,7 +23,7 @@ Than open your terminal `source .env`
  
 Now you can enter in your console with `iex -S mix` 
 
-Then run an experimental seed, as times as you want, pass this command above: 
+Then run an experimental seed, as times as you want, pass this command bellow: 
 
 `Datonator.create_eligibles`
 
