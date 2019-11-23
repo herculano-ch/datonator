@@ -1,19 +1,38 @@
 # Datonator
 
-To start your Phoenix server:
+To start your initial configurations:
+
+Remember that you assumes to use mysql database
+
+Create a `.env` file in root, with something like this:
+
+```
+export MYSQL_USER=root
+export MYSQL_PASSWORD=abc123
+export MYSQL_DATABASE=datonator_db
+
+```
+
+Than open your terminal `source .env`
+
 
   * Install dependencies with `mix deps.get`
   * Create and migrate your database with `mix ecto.setup`
-  * Start Phoenix endpoint with `mix phx.server`
+  
+## Database seeds
+ 
+Now you can enter in your console with `iex -S mix` 
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Then run an experimental seed, as times as you want, pass this command above: 
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+`Datonator.create_eligibles`
 
-## Learn more
+## Running up your webserver
 
-  * Official website: http://www.phoenixframework.org/
-  * Guides: https://hexdocs.pm/phoenix/overview.html
-  * Docs: https://hexdocs.pm/phoenix
-  * Mailing list: http://groups.google.com/group/phoenix-talk
-  * Source: https://github.com/phoenixframework/phoenix
+So now you can run the webserver
+
+`mix phx.server`
+
+Visit your localhost into http://localhost:4000/api/report/eligibles
+
+And voalá!
